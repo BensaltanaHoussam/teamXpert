@@ -5,6 +5,32 @@
     font-family: "Outfit", sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 4px; 
+  
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+/* Scrollbar thumb (the part that moves) */
+::-webkit-scrollbar-thumb {
+    background: #1c1b1b; /* Gray color for the thumb */
+    border-radius: 10px;
+}
+
+/* Scrollbar thumb when hovered */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker gray when hovered */
+}
+
+/* Scrollbar corner (where the vertical and horizontal scrollbars meet) */
+::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+}
+
 
 body{
 margin: 0;
@@ -22,4 +48,15 @@ scroll-behavior: smooth;
 
 }
 
+.team-management{
+    background-image: url("/img/BG-3.jpg");
+    background-repeat: no-repeat;
+    background-size:140%;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(2) contrast(1,9) ; 
+
+
+ 
+}
 
