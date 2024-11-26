@@ -10,4 +10,16 @@ body{
 margin: 0;
 padding: 0;
 width: 100%;
+scroll-behavior: smooth;
 }
+
+
+
+.welcome-container{
+    background-image: url("./img/bg-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
