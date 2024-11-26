@@ -49,7 +49,7 @@ scroll-behavior: smooth;
 }
 
 .team-management{
-    background-image: url("/img/BG-3.jpg");
+    background-image: url("./img/BG-3.jpg");
     background-repeat: no-repeat;
     background-size:140%;
     background-position: center;
