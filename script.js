@@ -50,9 +50,9 @@
 
     
     playerForm.addEventListener("submit", function (event) {
-
-        
+        resetForm()
         event.preventDefault(); 
+        formValidation();
         
         
         const playerData = {
@@ -70,10 +70,32 @@
             }
         };
 
+
         closeModal();
     });
 });
   
+
+function resetForm() {
+
+    document.getElementById("fullName").value = "";
+    document.getElementById("position").value = "";
+    document.getElementById("club").value = "";
+    document.getElementById("country").value = "";  
+    document.getElementById("pac").value = "";
+    document.getElementById("sho").value = "";
+    document.getElementById("pas").value = "";
+    document.getElementById("dri").value = "";
+    document.getElementById("def").value = "";
+    document.getElementById("phy").value = "";
+}
+
+
+
+
+
+  
+
 
 
   

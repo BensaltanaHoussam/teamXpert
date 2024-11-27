@@ -293,18 +293,10 @@
           </div>
 
         </div>
-
-
-
-        <!-- Main Content (existing structure) -->
-<section class="team-management pb-6">
-  <div class="flex flex-col md:flex-row justify-around">
       
-      <!-- Main Team -->
-      <div class="main-section">
-          <!-- Your existing content goes here... -->
+          
 
-          <!-- Modal for adding a player -->
+          <!-- Modal f-->
           <div id="playerModal" class="modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden justify-center items-center">
               <div class="modal-content bg-white translate-y-[120px] translate-x-[50%] p-6 rounded-lg w-[600px]">
                   <h2 class="text-lg font-bold mb-4">Add Player</h2>
@@ -316,40 +308,34 @@
                       <div>
                         <div class="mb-4">
                           <label for="fullName" class="block text-sm font-semibold">Full Name</label>
-                          <input type="text" id="fullName" placeholder="Enter Player Name" class="w-full p-2 border rounded" required />
+                          <input type="text" id="fullName" placeholder="Enter Player Name" class="w-full p-2 border rounded"  />
+                          <p  id="messageError"  class=" text-red-600 text-sm hidden">Enter a name</p>
                       </div>
   
                       <div class="mb-4">
                           <label for="position" class="block text-sm font-semibold">Position</label>
-                          <input type="text" id="position" placeholder="Enter Player Position" class="w-full p-2 border rounded" required />
+                          <input type="text" id="position" placeholder="Enter Player Position" class="w-full p-2 border rounded"  />
+                          <p id="messageError" class="text-red-600 text-sm hidden">Position is unvailable</p>
                       </div>
                       </div>
   
                       <div>
                         <div class="mb-4">
                           <label for="club" class="block text-sm font-semibold">Club</label>
-                          <input type="text" id="club" placeholder="Enter Player Club" class="w-full p-2 border rounded" required />
+                          <input type="text" id="club" placeholder="Enter Player Club" class="w-full p-2 border rounded"  />
+                          <p id="messageError" class="text-red-600 text-sm hidden">enter the club of player</p>
                       </div>
   
                       <div class="mb-4">
                           <label for="country" class="block text-sm font-semibold">Country</label>
-                          <input type="text" id="country" placeholder="Enter Player Country" class="w-full p-2 border rounded" required />
+                          <input type="text" id="country" placeholder="Enter Player Country" class="w-full p-2 border rounded"  />
+                          <p id="messageError" class="text-red-600 text-sm hidden">Enter the country of player</p>
                       </div>
                       </div>
 
                       
 
                     </div>
-
-
-
-
-
-                
-         
-
-                  
-
                       <div class="mb-4 flex gap-4">
                           <div>
                               <label for="pac" class="block text-sm font-semibold">Pac</label>
@@ -377,21 +363,18 @@
                           </div>
                       </div>
 
-                      <div class="mt-4 flex justify-between">
+                      <div class="mt-8 flex justify-end gap-2">
                           <button type="submit" class="bg-black text-white px-4 py-2 rounded-lg">Add Player</button>
                           <button type="button" id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded-lg">Cancel</button>
                       </div>
                   </form>
+
               </div>
           </div>
-      </div>
+      
 
-      <!-- Bench (Existing content) -->
-      <div class="remplacent-section">
-          <!-- Your existing content goes here... -->
-      </div>
-  </div>
-</section>
+   
+
 
 
 
