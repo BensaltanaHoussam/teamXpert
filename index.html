@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <title>teamXpert</title>
 </head>
-<body>
+<body class="relative">
  
 
   <header class="bg-white drop-shadow-xl  flex justify-between items-center p-5 md:px-8 z-20 sticky top-0">
@@ -82,225 +82,331 @@
   </section>
   
 
-  <section class="team-management pb-6">
-    <div class="flex flex-col md:flex-row justify-around ">
+    <section class="team-management pb-6">
+      <div class="flex flex-col md:flex-row justify-around ">
 
-      <!-- Main Team -->
-      <div class="main-section ">
+        <!-- Main Team -->
+        <div class="main-section ">
 
-        <div class="pb-4 mt-6 ml-24">
-          <h1 class="font-bold text-lg text-white">The main players</h1>
-          <p class="font-light text-white">Press plus buttons to add a player</p>
-        </div>
-
-        <div class="main-team relative w-[600px] mt-10">
-          <!-- Ground Image -->
-          <img class="w-full" src="./img/Ground-black.png" alt="black-ground">
+          <div class="pb-4 mt-6 ml-24">
+            <h1 class="font-bold text-lg text-white">The main players</h1>
+            <p class="font-light text-white">Press plus buttons to add a player</p>
+          </div>
           
-          <!-- Attackers -->
-          <div class="attackers absolute -top-8 left-[106px] flex gap-8">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="attacker 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+
+          <div class="main-team relative w-[600px] mt-10">
+            <!-- Ground Image -->
+            <img class="w-full" src="./img/Ground-black.png" alt="black-ground">
+            
+            <!-- Attackers -->
+            <div class="attackers absolute -top-8 left-[106px] flex gap-8">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="attacker 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="attacker 2">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="attacker 3">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
             </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="attacker 2">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+        
+            <!-- Midfielders -->
+            <div class="midfilders absolute top-36 left-[106px] flex gap-8">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="mid 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="mid 2">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="mid 3">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
             </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="attacker 3">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+        
+            <!-- Defenders -->
+            <div class="diffenders absolute top-80 left-[34px] flex gap-8">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="diff 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px] translate-y-5">
+                <img class="w-full " src="./img/Player-card.png" alt="diff 2">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px] translate-y-5">
+                <img class="w-full" src="./img/Player-card.png" alt="diff 3">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="diff 4">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
             </div>
+        
+            <!-- Goalkeeper -->
+            <div class="goalKeeper absolute top-[490px] left-[245px] flex gap-8">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+            </div>
+          </div> 
+
+          <div class="stats-info bg-black/80 text-white flex justify-around mt-1 p-4">
+            <div>
+              <h3 class="text-xs  pb-1">Line-up : 4-3-3</h3>
+              <h3 class="text-xs">M:Bensaltana</h3>
+            </div>
+            <div>
+              <h1 class="font-bold ">Team Name</h1>
+            </div>
+            <div>
+              <h3 class="text-xs pb-1">Subsititution : 15</h3>
+              <h3 class="text-xs">Players : 11</h3>
+            </div>
+
           </div>
+
+        </div>
+
+
+
+
+        <!-- Bench -->
+
+        <div class="remplacent-section">
+
+          <div class=" mt-6">
+            <h1 class="font-bold text-lg text-white">Substitution</h1>
+            <p class="font-light text-white ">Info : You can’t Play a match without adding a Substitution players </p>
+          </div>
+
+          <div class="bench-players flex flex-col gap-4 items-center h-[650px] w-[300px] bg-white/40 p-4 mt-10  rounded-tl-xl rounded-bl-xl overflow-y-scroll">
+
+            <div class="flex gap-4">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
       
-          <!-- Midfielders -->
-          <div class="midfilders absolute top-36 left-[106px] flex gap-8">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="mid 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
             </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="mid 2">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="mid 3">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-          </div>
       
-          <!-- Defenders -->
-          <div class="diffenders absolute top-80 left-[34px] flex gap-8">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="diff 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px] translate-y-5">
-              <img class="w-full " src="./img/Player-card.png" alt="diff 2">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px] translate-y-5">
-              <img class="w-full" src="./img/Player-card.png" alt="diff 3">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="diff 4">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-          </div>
+            <div class="flex gap-4">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
       
-          <!-- Goalkeeper -->
-          <div class="goalKeeper absolute top-[490px] left-[245px] flex gap-8">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
             </div>
+      
+            <div class="flex gap-4">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+      
+            </div>
+      
+            <div class="flex gap-4">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+      
+            </div>
+      
+      
+            <div class="flex gap-4">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+      
+            </div>
+      
+      
+            <div class="flex gap-4">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+      
+            </div>
+      
+      
+            <div class="flex gap-4">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+      
+            </div>
+      
+      
+            <div class="flex  self-start ml-4">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+      
+            </div>
+      
+      
           </div>
-        </div> 
-
-        <div class="stats-info bg-black/80 text-white flex justify-around mt-1 p-4">
           <div>
-            <h3 class="text-xs  pb-1">Line-up : 4-3-3</h3>
-            <h3 class="text-xs">M:Bensaltana</h3>
-          </div>
-          <div>
-            <h1 class="font-bold ">Team Name</h1>
-          </div>
-          <div>
-            <h3 class="text-xs pb-1">Subsititution : 15</h3>
-            <h3 class="text-xs">Players : 11</h3>
+            <p class="text-gray-100 font-light">You can only add 15 Players on Substitution!</p>
           </div>
 
         </div>
 
-      </div>
 
 
+        <!-- Main Content (existing structure) -->
+<section class="team-management pb-6">
+  <div class="flex flex-col md:flex-row justify-around">
+      
+      <!-- Main Team -->
+      <div class="main-section">
+          <!-- Your existing content goes here... -->
 
+          <!-- Modal for adding a player -->
+          <div id="playerModal" class="modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden justify-center items-center">
+              <div class="modal-content bg-white translate-y-[120px] translate-x-[50%] p-6 rounded-lg w-[600px]">
+                  <h2 class="text-lg font-bold mb-4">Add Player</h2>
 
+                 
+                  <form id="playerForm">
 
-      <!-- Bench -->
-
-      <div class="remplacent-section">
-
-        <div class=" mt-6">
-          <h1 class="font-bold text-lg text-white">Substitution</h1>
-          <p class="font-light text-white ">Info : You can’t Play a match without adding a Substitution players </p>
-        </div>
-
-        <div class="bench-players flex flex-col gap-4 items-center h-[650px] w-[300px] bg-white/40 p-4 mt-10  rounded-tl-xl rounded-bl-xl overflow-y-scroll">
-
-          <div class="flex gap-4">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-    
-          </div>
-    
-          <div class="flex gap-4">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-    
-          </div>
-    
-          <div class="flex gap-4">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-    
-          </div>
-    
-          <div class="flex gap-4">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-    
-          </div>
-    
-    
-          <div class="flex gap-4">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-    
-          </div>
-    
-    
-          <div class="flex gap-4">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-    
-          </div>
-    
-    
-          <div class="flex gap-4">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-    
-          </div>
-    
-    
-          <div class="flex gap-4 self-start ">
-            <div class="relative w-[110px]">
-              <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-              <a href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-            </div>
-    
-          </div>
-    
-    
-        </div>
-        <div>
-          <p class="text-gray-100 font-light">You can only add 15 Players on Substitution!</p>
-        </div>
-
-      </div>
+                    <div class="flex gap-4 justify-center">
+                      <div>
+                        <div class="mb-4">
+                          <label for="fullName" class="block text-sm font-semibold">Full Name</label>
+                          <input type="text" id="fullName" placeholder="Enter Player Name" class="w-full p-2 border rounded" required />
+                      </div>
   
+                      <div class="mb-4">
+                          <label for="position" class="block text-sm font-semibold">Position</label>
+                          <input type="text" id="position" placeholder="Enter Player Position" class="w-full p-2 border rounded" required />
+                      </div>
+                      </div>
+  
+                      <div>
+                        <div class="mb-4">
+                          <label for="club" class="block text-sm font-semibold">Club</label>
+                          <input type="text" id="club" placeholder="Enter Player Club" class="w-full p-2 border rounded" required />
+                      </div>
+  
+                      <div class="mb-4">
+                          <label for="country" class="block text-sm font-semibold">Country</label>
+                          <input type="text" id="country" placeholder="Enter Player Country" class="w-full p-2 border rounded" required />
+                      </div>
+                      </div>
 
-     
+                      
+
+                    </div>
 
 
-   
 
-    </div>
+
+
+                
+         
+
+                  
+
+                      <div class="mb-4 flex gap-4">
+                          <div>
+                              <label for="pac" class="block text-sm font-semibold">Pac</label>
+                              <input type="number" id="pac" placeholder="num" class="w-full p-2 border rounded" min="0" max="100" required />
+                          </div>
+                          <div>
+                              <label for="sho" class="block text-sm font-semibold">Sho</label>
+                              <input type="number" id="sho" placeholder="num" class="w-full p-2 border rounded" min="0" max="100" required />
+                          </div>
+                          <div>
+                              <label for="pas" class="block text-sm font-semibold">Pas</label>
+                              <input type="number" id="pas" placeholder="num" class="w-full p-2 border rounded" min="0" max="100" required />
+                          </div>
+                          <div>
+                              <label for="dri" class="block text-sm font-semibold">Dri</label>
+                              <input type="number" id="dri" placeholder="num" class="w-full p-2 border rounded" min="0" max="100" required />
+                          </div>
+                          <div>
+                              <label for="def" class="block text-sm font-semibold">Def</label>
+                              <input type="number" id="def" placeholder="num" class="w-full p-2 border rounded" min="0" max="100" required />
+                          </div>
+                          <div>
+                              <label for="phy" class="block text-sm font-semibold">Phy</label>
+                              <input type="number" id="phy" placeholder="num" class="w-full p-2 border rounded" min="0" max="100" required />
+                          </div>
+                      </div>
+
+                      <div class="mt-4 flex justify-between">
+                          <button type="submit" class="bg-black text-white px-4 py-2 rounded-lg">Add Player</button>
+                          <button type="button" id="closeModal" class="bg-red-500 text-white px-4 py-2 rounded-lg">Cancel</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+
+      <!-- Bench (Existing content) -->
+      <div class="remplacent-section">
+          <!-- Your existing content goes here... -->
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+    
+
+      
+
+
+    
+
+      </div>
 
 
 
@@ -313,6 +419,8 @@
 
 
   </section>
+
+  
 
 
   <footer class="bg-[#1E1E1E]">

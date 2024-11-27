@@ -20,7 +20,7 @@
     background: #1c1b1b; /* Gray color for the thumb */
     border-radius: 10px;
 }
-
+    
 /* Scrollbar thumb when hovered */
 ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Darker gray when hovered */
