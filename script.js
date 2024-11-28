@@ -515,15 +515,16 @@
 
 
     function renderPlayers(post){
-        // Use filter to get the players with the specified position
+       
         const arr = playersData.filter(player => player.position === post);
+
       
         const playersContainer = document.querySelector(".modal-content > .flex.gap-2.flex-wrap");
+       
         
         // Clear existing players
         playersContainer.innerHTML = "";
       
-        // Loop through the filtered players and add them to the DOM
         arr.forEach(player => {
             const playerCard = `
                 <div class="flex gap-2">
