@@ -17,7 +17,7 @@
             physical: 65
         },
         {
-            Name: "Cristiano Ronaldo",
+            Name: "Ronaldo",
             photo: "https://cdn.sofifa.net/players/020/801/25_120.png",
            position: "ST",
             nationality: "Portugal",
@@ -321,7 +321,7 @@
             physical: 63
         },
         {
-            Name: "Trent Alexander-Arnold",
+            Name: "A.Arnold",
             photo: "https://cdn.sofifa.net/players/231/281/25_120.png",
            position: "RB",
             nationality: "England",
@@ -352,7 +352,7 @@
             physical: 78
         },
         {
-            Name: "Youssef En-Nesyri",
+            Name: "En-Nesyri",
             photo: "https://cdn.sofifa.net/players/235/410/25_120.png",
            position: "ST",
             nationality: "Morocco",
@@ -368,7 +368,7 @@
             physical: 80
         },
         {
-            Name: "Noussair Mazraoui",
+            Name: "Mazraoui",
             photo: "https://cdn.sofifa.net/players/236/401/25_120.png",
            position: "LB",
             nationality: "Morocco",
@@ -400,7 +400,7 @@
             physical: 84
         },
         {
-            Name: "Gianluigi Donnarumma",
+            Name: "Donnarumma",
             photo: "https://cdn.sofifa.net/players/230/621/25_120.png",
            position: "GK",
             nationality: "Italy",
@@ -514,19 +514,20 @@
     }
 
 
-    const renderPlayers = (players) => {
-        const playersContainer = document.querySelector(".modal-content > .flex.gap-2");
-    
+    function renderPlayers(post){
+        // Use filter to get the players with the specified position
+        const arr = playersData.filter(player => player.position === post);
+      
+        const playersContainer = document.querySelector(".modal-content > .flex.gap-2.flex-wrap");
+        
         // Clear existing players
         playersContainer.innerHTML = "";
-    
-        players.forEach(player => {
+      
+        // Loop through the filtered players and add them to the DOM
+        arr.forEach(player => {
             const playerCard = `
-
-
-
-                            <div class="flex gap-2">
-                    <div class="relative w-[110px] hover:transform hover:scale-110 duration-300 cursor-pointer">
+                <div class="flex gap-2">
+                    <div class="relative w-[110px] hover:scale-110 duration-300 cursor-pointer">
                         <img class="w-full" src="./img/Player-card.png" alt="player card">
                         <p class="absolute bottom-2 left-1/2 -translate-x-[30px] -translate-y-[94px] text-gray-300 font-bold text-xs">${player.rating}</p>
                         <p class="absolute bottom-2 left-1/2 -translate-x-[28px] -translate-y-[81px] text-gray-300 font-light text-[8px]">${player.position}</p>
@@ -542,16 +543,16 @@
                         <p class="absolute bottom-2 left-1/2 translate-x-[7px] -translate-y-[12px] text-gray-400 font-light text-[8px]">${player.physical}</p>
                     </div>
                 </div>
-
-
-            `
-            ;
+            `;
             playersContainer.innerHTML += playerCard;
         });
     };
     
-    // Call the render function to display all players
+    
+  
     renderPlayers(playersData);
+
+
 
 
 
