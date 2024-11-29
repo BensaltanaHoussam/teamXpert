@@ -575,7 +575,7 @@
                 </div>
             `;
         }
-      
+         playerModal.classList.add("hidden");
     }
     
     
