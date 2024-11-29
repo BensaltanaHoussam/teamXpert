@@ -35,7 +35,7 @@
         {
             Name: "Kevin De Bruyne",
             photo: "https://cdn.sofifa.net/players/192/985/25_120.png",
-           position: "CM",
+           position: "RCM",
             nationality: "Belgium",
             flag: "https://cdn.sofifa.net/flags/be.png",
             club: "Manchester City",
@@ -67,7 +67,7 @@
         {
             Name: "Virgil van Dijk",
             photo: "https://cdn.sofifa.net/players/203/376/25_120.png",
-           position: "CB",
+           position: "RCB",
             nationality: "Netherlands",
             flag: "https://cdn.sofifa.net/flags/nl.png",
             club: "Liverpool",
@@ -83,7 +83,7 @@
         {
             Name: "Antonio Rudiger",
             photo: "https://cdn.sofifa.net/players/205/452/25_120.png",
-           position: "CB",
+           position: "LCB",
             nationality: "Germany",
             flag: "https://cdn.sofifa.net/flags/de.png",
             club: "Real Madrid",
@@ -131,7 +131,7 @@
         {
             Name: "Joshua Kimmich",
             photo: "https://cdn.sofifa.net/players/212/622/25_120.png",
-           position: "CM",
+           position: "RCM",
             nationality: "Germany",
             flag: "https://cdn.sofifa.net/flags/de.png",
             club: "Bayern Munich",
@@ -241,7 +241,7 @@
             physical: 88
         },
         {
-            Name: "N'Golo Kanté",
+            Name: "N Golo Kanté",
             photo: "https://cdn.sofifa.net/players/215/914/25_120.png",
            position: "CDM",
             nationality: "France",
@@ -470,12 +470,13 @@
     
     
         closeModalButton.addEventListener("click", closeModal);
+        
+
 
         
         playerForm.addEventListener("submit", function (event) {
             resetForm()
-            event.preventDefault(); 
-            formValidation();
+         
             
             
             const playerData = {
@@ -514,20 +515,16 @@
     }
 
 
-    function renderPlayers(post){
-       
+    function renderPlayers(post) {
         const arr = playersData.filter(player => player.position === post);
-
-      
         const playersContainer = document.querySelector(".modal-content > .flex.gap-2.flex-wrap");
-       
-        
+    
         // Clear existing players
         playersContainer.innerHTML = "";
-      
+    
         arr.forEach(player => {
             const playerCard = `
-                <div class="flex gap-2">
+                <div class="flex gap-2" id="player-${player.id}">
                     <div class="relative w-[110px] hover:scale-110 duration-300 cursor-pointer">
                         <img class="w-full" src="./img/Player-card.png" alt="player card">
                         <p class="absolute bottom-2 left-1/2 -translate-x-[30px] -translate-y-[94px] text-gray-300 font-bold text-xs">${player.rating}</p>
@@ -535,6 +532,7 @@
                         <img class="w-[11px] absolute bottom-2 left-1/2 -translate-x-[29px] -translate-y-[66px]" src="${player.logo}" alt="${player.club} logo">
                         <img class="w-[11px] absolute bottom-2 left-1/2 -translate-x-[29px] -translate-y-[55px]" src="${player.flag}" alt="${player.nationality} flag">
                         <img class="w-[58px] absolute bottom-2 left-1/2 -translate-x-[19px] -translate-y-[57px]" src="${player.photo}" alt="${player.Name} photo">
+                         <button id="replace"  onclick="replacePlayerCard('${post}', '${player.id}', '${player.photo}', '${player.Name}','${player.rating}','${player.position}','${player.logo}','${player.flag}','${player.pace}','${player.shooting}','${player.passing}','${player.dribbling}','${player.defending}','${player.physical}')" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[15px] w-[85px] h-28"></button>
                         <p class="absolute bottom-2 left-1/2 -translate-x-[13px] -translate-y-[46px] text-gray-300 font-normal text-[7px]">${player.Name}</p>
                         <p class="absolute bottom-2 left-1/2 -translate-x-[31px] -translate-y-[32px] text-gray-400 font-light text-[8px]">${player.pace}</p>
                         <p class="absolute bottom-2 left-1/2 -translate-x-[31px] -translate-y-[22px] text-gray-400 font-light text-[8px]">${player.shooting}</p>
@@ -547,8 +545,43 @@
             `;
             playersContainer.innerHTML += playerCard;
         });
-    };
+    }
+
     
+    function replacePlayerCard(position, playerId, playerPhoto, playerName, playerRating, playerPosition, playerLogo, playerFlag, playerPace, playerShooting, playerPassing, playerDribbling, playerDefending, playerPhysical) {
+        // Find the target position container (empty slot)
+        const playerSlot = document.querySelector(`#${position}`);
+    
+        if (playerSlot) {
+            // Remove any existing content inside the slot
+            playerSlot.innerHTML = "";
+    
+            // Insert the full player card inside the container
+            playerSlot.innerHTML = `
+                <div class="relative w-[110px] hover:scale-110 duration-300 cursor-pointer">
+                    <img class="w-full" src="./img/Player-card.png" alt="${playerName} card">
+                    <p class="absolute bottom-2 left-1/2 -translate-x-[30px] -translate-y-[94px] text-gray-300 font-bold text-xs">${playerRating}</p>
+                    <p class="absolute bottom-2 left-1/2 -translate-x-[28px] -translate-y-[81px] text-gray-300 font-light text-[8px]">${playerPosition}</p>
+                    <img class="w-[11px] absolute bottom-2 left-1/2 -translate-x-[29px] -translate-y-[66px]" src="${playerLogo}" alt="${playerName} logo">
+                    <img class="w-[11px] absolute bottom-2 left-1/2 -translate-x-[29px] -translate-y-[55px]" src="${playerFlag}" alt="${playerName} flag">
+                    <img class="w-[58px] absolute bottom-2 left-1/2 -translate-x-[19px] -translate-y-[57px]" src="${playerPhoto}" alt="${playerName} photo">
+                    <p class="absolute bottom-2 left-1/2 -translate-x-[13px] -translate-y-[46px] text-gray-300 font-normal text-[7px]">${playerName}</p>
+                    <p class="absolute bottom-2 left-1/2 -translate-x-[31px] -translate-y-[32px] text-gray-400 font-light text-[8px]">${playerPace}</p>
+                    <p class="absolute bottom-2 left-1/2 -translate-x-[31px] -translate-y-[22px] text-gray-400 font-light text-[8px]">${playerShooting}</p>
+                    <p class="absolute bottom-2 left-1/2 -translate-x-[31px] -translate-y-[12px] text-gray-400 font-light text-[8px]">${playerPassing}</p>
+                    <p class="absolute bottom-2 left-1/2 translate-x-[7px] -translate-y-[32px] text-gray-400 font-light text-[8px]">${playerDribbling}</p>
+                    <p class="absolute bottom-2 left-1/2 translate-x-[7px] -translate-y-[22px] text-gray-400 font-light text-[8px]">${playerDefending}</p>
+                    <p class="absolute bottom-2 left-1/2 translate-x-[7px] -translate-y-[12px] text-gray-400 font-light text-[8px]">${playerPhysical}</p>
+                </div>
+            `;
+        }
+      
+    }
+    
+    
+    
+    
+
     
   
     renderPlayers(playersData);

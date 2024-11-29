@@ -99,23 +99,23 @@
             <img class="w-full" src="./img/Ground-black.png" alt="black-ground">
             
             <!-- Attackers -->
-            <div id="attackers" class=" absolute -top-8 left-[106px] flex gap-8">
+            <div id="attackers" class="plan absolute -top-8 left-[106px] flex gap-8">
 
-              <div class="relative w-[110px] hover:scale-110 duration-300 ">
+              <div  id="LW"class="relative w-[110px] hover:scale-110 duration-300 ">
                 <img class="w-full" src="./img/Player-card.png" alt="attacker 2">
                 <a onclick="renderPlayers('LW')" id="addPlayer" href="#" class="attacker absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
              
 
 
-              <div class="relative w-[110px] hover:scale-110 duration-300 ">
+              <div  id="ST" class="relative w-[110px] hover:scale-110 duration-300 ">
                 <img class="w-full" src="./img/Player-card.png" alt="attacker 2">
                 <a onclick="renderPlayers('ST')" id="addPlayer" href="#" class="attacker absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
 
 
               
-              <div class="relative w-[110px] hover:scale-110 duration-300">
+              <div  id="RW" class="relative w-[110px] hover:scale-110 duration-300">
                 <img class="w-full" src="./img/Player-card.png" alt="attacker 3">
                 <a onclick="renderPlayers('RW')" id="addPlayer" href="#" class="attacker absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
@@ -123,42 +123,42 @@
         
             <!-- Midfielders -->
             <div id="midfilders" class="midfilders absolute top-36 left-[106px] flex gap-8">
-              <div class="relative w-[110px] hover:scale-110 duration-300 ">
+              <div id="CM" class="relative w-[110px] hover:scale-110 duration-300 ">
                 <img class="w-full" src="./img/Player-card.png" alt="mid 1">
                 <a onclick="renderPlayers('CM')" id="addPlayer" href="#" class="center absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
-              <div class="relative w-[110px] hover:scale-110 duration-300">
+              <div  id="CDM" class="relative w-[110px] hover:scale-110 duration-300">
                 <img class="w-full" src="./img/Player-card.png" alt="mid 2">
                 <a onclick="renderPlayers('CDM')" id="addPlayer" href="#" class="center absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
-              <div class="relative w-[110px] hover:scale-110 duration-300">
+              <div id="RCM" class="relative w-[110px] hover:scale-110 duration-300">
                 <img class="w-full" src="./img/Player-card.png" alt="mid 3">
-                <a onclick="renderPlayers('CM')" id="addPlayer" href="#" class="center absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+                <a  onclick="renderPlayers('RCM')" id="addPlayer" href="#" class="center absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
             </div>
         
             <!-- Defenders -->
             <div id="Defenders" class="diffenders absolute top-80 left-[34px] flex gap-8">
-              <div class="relative w-[110px] hover:scale-110 duration-300">
+              <div  id="LB" class="relative w-[110px] hover:scale-110 duration-300">
                 <img class="w-full" src="./img/Player-card.png" alt="diff 1">
                 <a onclick="renderPlayers('LB')" id="addPlayer" href="#" class="deffender absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
-              <div class="relative w-[110px] translate-y-5 hover:scale-110 duration-300">
+              <div  id="LCB" class="relative w-[110px] translate-y-5 hover:scale-110 duration-300">
                 <img class="w-full " src="./img/Player-card.png" alt="diff 2">
-                <a onclick="renderPlayers('CB')" id="addPlayer" href="#" class="deffender absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+                <a onclick="renderPlayers('LCB')" id="addPlayer" href="#" class="deffender absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
-              <div class="relative w-[110px] translate-y-5 hover:scale-110 duration-300">
+              <div  id="RCB" class="relative w-[110px] translate-y-5 hover:scale-110 duration-300">
                 <img class="w-full" src="./img/Player-card.png" alt="diff 3">
-                <a onclick="renderPlayers('CB')" id="addPlayer" href="#" class="deffender absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+                <a onclick="renderPlayers('RCB')" id="addPlayer" href="#" class="deffender absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
-              <div class="relative w-[110px] hover:scale-110 duration-300">
+              <div  id="RB" class="relative w-[110px] hover:scale-110 duration-300">
                 <img class="w-full" src="./img/Player-card.png" alt="diff 4">
                 <a onclick="renderPlayers('RB')" id="addPlayer" href="#" class="deffender absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
             </div>
         
             <!-- Goalkeeper -->
-            <div id="goalKeeper" class="goalKeeper absolute top-[490px] left-[245px] flex gap-8">
+            <div  id="GK" id="goalKeeper" class="goalKeeper absolute top-[490px] left-[245px] flex gap-8">
               <div class="relative w-[110px] hover:scale-110 duration-300">
                 <img class="w-full" src="./img/Player-card.png" alt="GK 1">
                 <a onclick="renderPlayers('GK')" id="addPlayer" href="#" class="goal absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
@@ -195,103 +195,102 @@
             <p class="font-light text-white ">Info : You can’t Play a match without adding a Substitution players </p>
           </div>
 
-          <div class="bench-players flex flex-col gap-4 items-center h-[650px] w-[300px] bg-white/40 p-4 mt-10  rounded-tl-xl rounded-bl-xl overflow-y-scroll">
+          <div class="bench-players flex flex-col gap-4 items-center h-[650px] w-[300px] bg-slate-200/40 p-4 mt-10  rounded-tl-xl rounded-bl-xl overflow-y-scroll">
 
+            <p class=" font-normal bg-red-600/80 text-white px-20 py-1 rounded-lg">Attackers</p>
+            <div class="flex gap-4 flex-wrap">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a onclick="renderPlayers('ST')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a onclick="renderPlayers('RW')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a onclick="renderPlayers('LW')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+      
+            </div>
+
+            <!-- Line -->
+            <div class="w-full border-[1px] border-black">
+              
+              
+            </div>
+
+            
+            <p class=" font-normal bg-red-600/80 text-white px-20 py-1 rounded-lg">Midfielders</p>
+      
+            <div class="flex gap-4 flex-wrap ">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a onclick="renderPlayers('CM')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a onclick="renderPlayers('CDM')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a onclick="renderPlayers('CM')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+      
+            </div>
+
+             <!-- Line -->
+             <div class="w-full border-[1px] border-black">
+              
+              
+             </div>
+
+
+             <p class=" font-normal bg-red-600/80 text-white px-20 py-1 rounded-lg">deffenders</p>
+
+            <div class="flex gap-4 flex-wrap">
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a onclick="renderPlayers('CB')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a onclick="renderPlayers('CB')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a onclick="renderPlayers('LB')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+              <div class="relative w-[110px]">
+                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
+                <a onclick="renderPlayers('LW')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+      
+            </div>
+
+            <div class="w-full border-[1px] border-black">
+              
+              
+            </div>
+
+            <p class=" font-normal bg-red-600/80 text-white px-20 py-1 rounded-lg">Goalkeepers</p>
             <div class="flex gap-4">
               <div class="relative w-[110px]">
                 <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+                <a onclick="renderPlayers('GK')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
               <div class="relative w-[110px]">
                 <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+                <a onclick="renderPlayers('GK')" id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
               </div>
       
             </div>
-      
-            <div class="flex gap-4">
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-      
-            </div>
-      
-            <div class="flex gap-4">
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-      
-            </div>
-      
-            <div class="flex gap-4">
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-      
-            </div>
+
+           
+
       
       
-            <div class="flex gap-4">
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-      
-            </div>
-      
-      
-            <div class="flex gap-4">
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-      
-            </div>
-      
-      
-            <div class="flex gap-4">
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-      
-            </div>
-      
-      
-            <div class="flex  self-start ml-4">
-              <div class="relative w-[110px]">
-                <img class="w-full" src="./img/Player-card.png" alt="GK 1">
-                <a id="addPlayer" href="#" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
-              </div>
-      
-            </div>
+        
       
       
           </div>
