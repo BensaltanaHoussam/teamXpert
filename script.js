@@ -676,7 +676,60 @@
 
 
 
-  
+    document.addEventListener("DOMContentLoaded", function () {
+        const openModalButton = document.querySelector(".open-modal-btn");
+        const modal = document.querySelector(".player-modal");
+        const closeModalButton = modal.querySelector(".close-modal-btn");
+        const modalBody = modal.querySelector(".modal-body");
+    
+    
+    
+       
+        function renderModalContent() {
+            modalBody.innerHTML = ""; 
+    
+            playersData.forEach(player => {
+                const playerCard = `
+                    <div class="flex gap-2">
+                        <div class="relative w-[110px] hover:scale-110 duration-300 cursor-pointer">
+                            <img class="w-full" src="./img/Player-card.png" alt="player card">
+                            <p class="absolute bottom-2 left-1/2 transform -translate-x-[30px] -translate-y-[94px] text-gray-300 font-bold text-xs">${player.rating}</p>
+                            <p class="absolute bottom-2 left-1/2 transform -translate-x-[28px] -translate-y-[81px] text-gray-300 font-light text-[8px]">${player.position}</p>
+                            <img class="w-[11px] absolute bottom-2 left-1/2 transform -translate-x-[29px] -translate-y-[66px]" src="${player.logo}" alt="${player.club} logo">
+                            <img class="w-[11px] absolute bottom-2 left-1/2 transform -translate-x-[29px] -translate-y-[55px]" src="${player.flag}" alt="${player.nationality} flag">
+                            <img class="w-[58px] absolute bottom-2 left-1/2 transform -translate-x-[19px] -translate-y-[57px]" src="${player.photo}" alt="${player.Name} photo">
+                            <p class="absolute bottom-2 left-1/2 transform -translate-x-[13px] -translate-y-[46px] text-gray-300 font-normal text-[7px]">${player.Name}</p>
+                            <p class="absolute bottom-2 left-1/2 transform -translate-x-[31px] -translate-y-[32px] text-gray-400 font-light text-[8px]">${player.pace}</p>
+                            <p class="absolute bottom-2 left-1/2 transform -translate-x-[31px] -translate-y-[22px] text-gray-400 font-light text-[8px]">${player.shooting}</p>
+                            <p class="absolute bottom-2 left-1/2 transform -translate-x-[31px] -translate-y-[12px] text-gray-400 font-light text-[8px]">${player.passing}</p>
+                            <p class="absolute bottom-2 left-1/2 transform translate-x-[7px] -translate-y-[32px] text-gray-400 font-light text-[8px]">${player.dribbling}</p>
+                            <p class="absolute bottom-2 left-1/2 transform translate-x-[7px] -translate-y-[22px] text-gray-400 font-light text-[8px]">${player.defending}</p>
+                            <p class="absolute bottom-2 left-1/2 transform translate-x-[7px] -translate-y-[12px] text-gray-400 font-light text-[8px]">${player.physical}</p>
+                        </div>
+                    </div>
+                `;
+                modalBody.innerHTML += playerCard;
+            });
+        }
+    
+     
+        openModalButton.addEventListener("click", () => {
+            renderModalContent();
+            modal.classList.remove("hidden");
+        });
+    
+      
+        closeModalButton.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+
+        
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.classList.add("hidden");
+            }
+        });
+    });
     
     
     
