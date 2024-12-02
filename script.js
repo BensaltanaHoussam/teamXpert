@@ -421,22 +421,7 @@
     
     
     
-    // Get elements for toggle actions
-    const burgerIcon = document.getElementById('burger-icon');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeMenu = document.getElementById('close-menu');
 
-    
-    function toggleMenu() {
-        mobileMenu.classList.toggle('-translate-x-full');
-        mobileMenu.classList.toggle('translate-x-50');
-        burgerIcon.classList.toggle('hidden');
-    }
-
-    burgerIcon.addEventListener('click', toggleMenu);
-
-    
-    closeMenu.addEventListener('click', toggleMenu);
 
 
 
@@ -620,13 +605,84 @@
     }
 
 
-      
 
+
+    function formValidation() {
+        let fullName = document.getElementById("fullName").value;
+        let club = document.getElementById("club").value;
+        let country = document.getElementById("country").value;
     
+        const nameRegex = /^[a-zA-Z\s]+$/;
+        const clubRegex = /^[a-zA-Z\s]+$/;
+        const countryRegex = /^[a-zA-Z\s]+$/;
     
+        // Validate Full Name
+        if (!nameRegex.test(fullName)) {
+            alert("Please enter Full Name (only letters and spaces).");
+            return false;
+        }
+    
+   
+        // Validate Club
+        if (!clubRegex.test(club)) {
+            alert("Please enter a valid Club (only letters and spaces).");
+            return false;
+        }
+    
+        // Validate Country
+        if (!countryRegex.test(country)) {
+            alert("Please enter a valid Country (only letters and spaces).");
+            return false;
+        }
+    
+        const statsRegex = /^(?:[0-9]|[1-9][0-9]|100)$/;
+    
+        let pac = document.getElementById("pac").value;
+        let sho = document.getElementById("sho").value;
+        let pas = document.getElementById("pas").value;
+        let dri = document.getElementById("dri").value;
+        let def = document.getElementById("def").value;
+        let phy = document.getElementById("phy").value;
+    
+        // Validate Stats
+        if (!statsRegex.test(pac)) {
+            alert("Please enter a valid Pac value (0-100).");
+            return false;
+        }
+        if (!statsRegex.test(sho)) {
+            alert("Please enter a valid Sho value (0-100).");
+            return false;
+        }
+        if (!statsRegex.test(pas)) {
+            alert("Please enter a valid Pas value (0-100).");
+            return false;
+        }
+        if (!statsRegex.test(dri)) {
+            alert("Please enter a valid Dri value (0-100).");
+            return false;
+        }
+        if (!statsRegex.test(def)) {
+            alert("Please enter a valid Def value (0-100).");
+            return false;
+        }
+        if (!statsRegex.test(phy)) {
+            alert("Please enter a valid Phy value (0-100).");
+            return false;
+        }
+    
+        return true;
+    }
+
+
+
+
   
-    renderPlayers(playersData);
-
+    
+    
+    
+    
+    
+    
 
 
 
@@ -636,4 +692,6 @@
 
 
 
-    
+
+
+
