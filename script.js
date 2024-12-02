@@ -482,7 +482,7 @@
             const playerData = {
                 fullName: document.getElementById("fullName").value,
                 position: document.getElementById("position").value,
-                club: document.getElementById(club).value,
+                club: document.getElementById("club").value,
                 country: document.getElementById("country").value,
                 stats: {
                     pac: document.getElementById("pac").value,
@@ -549,14 +549,18 @@
 
     
     function replacePlayerCard(position, playerId, playerPhoto, playerName, playerRating, playerPosition, playerLogo, playerFlag, playerPace, playerShooting, playerPassing, playerDribbling, playerDefending, playerPhysical) {
-        // Find the target position container (empty slot)
+     
         const playerSlot = document.querySelector(`#${position}`);
+
+     
+
+
+  
     
         if (playerSlot) {
-            // Remove any existing content inside the slot
+        
             playerSlot.innerHTML = "";
     
-            // Insert the full player card inside the container
             playerSlot.innerHTML = `
                 <div class="relative w-[110px] hover:scale-110 duration-300 cursor-pointer">
                     <img class="w-full" src="./img/Player-card.png" alt="${playerName} card">
@@ -565,6 +569,7 @@
                     <img class="w-[11px] absolute bottom-2 left-1/2 -translate-x-[29px] -translate-y-[66px]" src="${playerLogo}" alt="${playerName} logo">
                     <img class="w-[11px] absolute bottom-2 left-1/2 -translate-x-[29px] -translate-y-[55px]" src="${playerFlag}" alt="${playerName} flag">
                     <img class="w-[58px] absolute bottom-2 left-1/2 -translate-x-[19px] -translate-y-[57px]" src="${playerPhoto}" alt="${playerName} photo">
+                    <button id="showToReplace"  class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[15px] w-[85px] h-28 "></button>
                     <p class="absolute bottom-2 left-1/2 -translate-x-[13px] -translate-y-[46px] text-gray-300 font-normal text-[7px]">${playerName}</p>
                     <p class="absolute bottom-2 left-1/2 -translate-x-[31px] -translate-y-[32px] text-gray-400 font-light text-[8px]">${playerPace}</p>
                     <p class="absolute bottom-2 left-1/2 -translate-x-[31px] -translate-y-[22px] text-gray-400 font-light text-[8px]">${playerShooting}</p>
@@ -574,14 +579,33 @@
                     <p class="absolute bottom-2 left-1/2 translate-x-[7px] -translate-y-[12px] text-gray-400 font-light text-[8px]">${playerPhysical}</p>
                 </div>
             `;
+
+            const replaceButton = playerSlot.querySelector('#showToReplace');
+            replaceButton.addEventListener("click", function(event) {
+                openModal(event);
+            });
+
+
+
+ 
         }
          playerModal.classList.add("hidden");
     }
     
-    
-    
-    
 
+
+
+ 
+
+    function openModal(event) {
+        event.preventDefault(); 
+        playerModal.classList.remove("hidden");
+    }
+
+
+      
+
+    
     
   
     renderPlayers(playersData);
