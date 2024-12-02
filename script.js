@@ -577,6 +577,7 @@
                     <p class="absolute bottom-2 left-1/2 translate-x-[7px] -translate-y-[32px] text-gray-400 font-light text-[8px]">${playerDribbling}</p>
                     <p class="absolute bottom-2 left-1/2 translate-x-[7px] -translate-y-[22px] text-gray-400 font-light text-[8px]">${playerDefending}</p>
                     <p class="absolute bottom-2 left-1/2 translate-x-[7px] -translate-y-[12px] text-gray-400 font-light text-[8px]">${playerPhysical}</p>
+                    <button id="deleteCard" class="absolute top-2 right-2 w-[20px] h-[20px] bg-red-500 text-white text-xs rounded-full">X</button> <!-- Delete button -->
                 </div>
             `;
 
@@ -587,7 +588,11 @@
 
 
 
- 
+        
+         const deleteButton = playerSlot.querySelector('#deleteCard');
+         deleteButton.addEventListener("click", function() {
+             deleteReplacedCard(position); 
+         });
         }
          playerModal.classList.add("hidden");
     }
@@ -595,7 +600,19 @@
 
 
 
- 
+    function deleteReplacedCard(position) {
+        const playerSlot = document.querySelector(`#${position}`);
+        if (playerSlot) {
+            playerSlot.innerHTML =  ` 
+                 <div  id="LW"class="relative w-[110px] hover:scale-110 duration-300 ">
+                <img class="w-full" src="./img/Player-card.png" alt="attacker 2">
+                <a onclick="openModal(event)" id="addPlayer" href="#" class="attacker absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[60px]  bg-gray-300 text-black font-semibold px-3 py-1 rounded-full text-sm hover:bg-red-600  duration-300">+</a>
+              </div>
+            
+            `; 
+        }
+    }
+    
 
     function openModal(event) {
         event.preventDefault(); 
