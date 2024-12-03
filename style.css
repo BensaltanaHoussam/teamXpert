@@ -40,23 +40,11 @@ scroll-behavior: smooth;
 }
 
 
-
-.welcome-container{
-    background-image: url("./img/bg-1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
 .team-management{
     background-image: url("./img/BG-3.jpg");
     background-repeat: no-repeat;
     background-size:140%;
     background-position: center;
     background-size: cover;
-   
-
-
- 
 }
 

@@ -19,67 +19,8 @@
       <img src="./img/Logo.png" alt="Logo">
     </div>
   
-    <!-- Navigation Links -->
-    <div class="hidden md:block">
-      <ul class="flex gap-8">
-        <a href="#" class="hover:text-red-600 underline underline-offset-4 transform duration-300"><li>Home</li></a>
-        <a href="#" class="hover:text-red-600 transform duration-300"><li>About Us</li></a>
-        <a href="#" class="hover:text-red-600 transform duration-300"><li>Services</li></a>
-        <a href="#" class="hover:text-red-600 transform duration-300"><li>Account</li></a>
-        <a href="#" class="hover:text-red-600 transform duration-300"><li>Team</li></a>
-      </ul>
-    </div>
-  
-    <!-- Download Button -->
-    <div class="hidden md:block">
-      <a class="bg-[#1E1E1E] text-white px-3 py-2 rounded-md hover:bg-red-600  duration-300" href="#">Download Now</a>
-    </div>
-  
-    <!-- Burger Menu (Visible only on small screens) -->
-    <div class="md:hidden">
-      <button id="burger-icon" class="text-gray-500 hover:text-black focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-  
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-white bg-opacity-75 z-10 transform -translate-x-full transition-transform duration-300">
-      <div class="flex justify-end p-4">
-        <button id="close-menu" class="text-gray-500">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <ul class="flex flex-col items-center gap-6">
-        <a href="#" class="text-black text-lg py-3" onclick="toggleMenu()">Home</a>
-        <a href="#" class="text-black text-lg py-3" onclick="toggleMenu()">About Us</a>
-        <a href="#" class="text-black text-lg py-3" onclick="toggleMenu()">Services</a>
-        <a href="#" class="text-black text-lg py-3" onclick="toggleMenu()">Account</a>
-        <a href="#" class="text-black text-lg py-3" onclick="toggleMenu()">Team</a>
-        <a href="#" class="bg-[#1E1E1E] text-white px-6 py-2 rounded-md text-lg" onclick="toggleMenu()">Download Now</a>
-      </ul>
-    </div>
   </header>
 
-  <section class="lading-page">
-    <div class="welcome-container relative flex py-6 md:py-24 px-4 md:px-32 md:items-center" >
-      <div class="py-2 flex flex-col md:gap-2 items-center md:items-start md">
-        <h1 class="text-3xl  md:text-4xl font-bold">teamXpert</h1>
-        <h3 class="text-xs font-medium pb-2">Plan your team, own victory with TeamXpert</h3>
-        <p class="text-center md:text-left font-light pb-4 text-base md:w-4/6 md:text-lg ">Unleash your inner coach with TeamXpert! Plan, strategize, and build your dream football team effortlessly. Whether you're organizing your local league or perfecting your fantasy squad, TeamXpert gives you the tools to stay ahead of the game. Take charge and lead your team to victory today!</p>
-        <a class=" bg-[#1E1E1E] text-white px-3 py-2 rounded-md hover:bg-red-600  duration-300" href="#">Start Plan</a>
-      </div>
-      <div class="absolute bottom-0 right-0 mr-24  w-[350px]">
-        <img class="cristiano hidden md:block" src="./img/Cristianno-home.png" alt="Cristianno-png">
-      </div>
-
-    </div>
-    
-
-  </section>
   
 
     <section class="team-management pb-6">
@@ -193,7 +134,7 @@
 
    <!-- Modal-all players -->
 <div class="hidden fixed inset-0 bg-black/50 flex justify-center items-center z-50 player-modal">
-  <div class="bg-gradient-to-r from-black to-white w-[90%] max-w-[700px] rounded-lg p-4 shadow-lg overflow-y-auto max-h-[90vh]">
+  <div class="bg-gradient-to-r from-black to-white w-[90%] max-w-[500px] rounded-lg p-4 shadow-lg overflow-y-auto max-h-[90vh]">
       <div class="flex justify-between items-center border-b pb-2 mb-4">
           <h2 class="text-xl text-white font-bold">All Players</h2>
           <button class="text-red-500 text-lg font-bold close-modal-btn">&times;</button>
@@ -287,6 +228,7 @@
                           <label for="phy" class="block text-sm font-semibold">Phy</label>
                           <input type="number" id="phy" placeholder="num" class="w-full p-2 border rounded" min="0" max="100" />
                       </div>
+                      
                   </div>
               
                   <div class="mt-8 flex justify-end gap-2">
@@ -343,51 +285,7 @@
   
 
 
-  <footer class="bg-[#1E1E1E]">
-    <div
-      class="container flex justify-around items-center p-8 flex-col md:flex-row"
-    >
-  
-    <div class="bg-white p-4 flex flex-col items-center">
-      <img
-      class="w-40 pb-2 "
-      src="./img/Logo.png"
-      alt="logo"
-    />
-    <p class="text-xs w-32 text-center">Thank you for visiting our website! We appreciate your time and support. If you have any questions or feedback, feel free to reach out. We look forward to having you back soon!</p>
-    
 
-    </div>
-     
-    
-      <div class="flex gap-28 text-white md:flex-row">
-        <div class="mb-4">
-          <h1 class="text-xl font-medium pb-2">Quick Links</h1>
-          <ul>
-            <li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"> <a href="#">Home</a></li>
-            <li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><a href="#">About Us</a></li>
-            <li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><a href="#">Services</a></li>
-            <li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><a href="#">Account</a></li>
-            <li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><a href="#">Team</a></li>
-          </ul>
-        </div>
-
-    
-
-        <div class="mb-4">
-          <h1 class="text-xl font-medium pb-2">Social Media</h1>
-          <ul>
-            <li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><i class="fa-brands fa-facebook pr-2"></i><a href="#">Facebook</a></li>
-            <a href="#"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><i class="fa-brands fa-instagram pr-2"></i><a href="#">Instagram</a></li>
-            <a href="#"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><i class="fa-brands fa-twitter pr-2"></i><a href="#">Twitter</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <p class="text-white flex justify-end text-xs p-4">
-      2024 Codeshogun. All rights reserved
-    </p>
-  </footer>
 
 
 

@@ -436,6 +436,11 @@
         const closeModalButton = document.getElementById("closeModal");
         const playerForm = document.getElementById("playerForm");
 
+
+
+
+
+
         
         function openModal(event) {
             event.preventDefault(); 
@@ -460,24 +465,33 @@
 
         
         playerForm.addEventListener("submit", function (event) {
-            resetForm()
-         
             
+         
+            if (!formValidation()) return;
             
             const playerData = {
-                fullName: document.getElementById("fullName").value,
+                id: playersData.length + 1,
+                Name: document.getElementById("fullName").value,
                 position: document.getElementById("position").value,
-                club: document.getElementById("club").value,
-                country: document.getElementById("country").value,
-                stats: {
-                    pac: document.getElementById("pac").value,
-                    sho: document.getElementById("sho").value,
-                    pas: document.getElementById("pas").value,
-                    dri: document.getElementById("dri").value,
-                    def: document.getElementById("def").value,
-                    phy: document.getElementById("phy").value,
-                }
+                    pace: document.getElementById("pac").value,
+                    shooting: document.getElementById("sho").value,
+                    passing: document.getElementById("pas").value,
+                    dribbling: document.getElementById("dri").value,
+                    defending: document.getElementById("def").value,
+                    physical: document.getElementById("phy").value,
+                    photo: "./img/no_player.png",
+                    logo: "https://cdn.sofifa.net/meta/team/3468/120.png",
+                    flag: "https://cdn.sofifa.net/flags/pt.png",
+                    rating:87
+                  
+                
             };
+
+            playersData.push(playerData);
+            resetForm()
+            renderPlayers(playerData.position);
+
+            console.log(playersData);
 
 
             closeModal();
@@ -554,7 +568,7 @@
                     <img class="w-[11px] absolute bottom-2 left-1/2 -translate-x-[29px] -translate-y-[66px]" src="${playerLogo}" alt="${playerName} logo">
                     <img class="w-[11px] absolute bottom-2 left-1/2 -translate-x-[29px] -translate-y-[55px]" src="${playerFlag}" alt="${playerName} flag">
                     <img class="w-[58px] absolute bottom-2 left-1/2 -translate-x-[19px] -translate-y-[57px]" src="${playerPhoto}" alt="${playerName} photo">
-                    <button id="showToReplace"  class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[15px] w-[85px] h-28 "></button>
+                    <button id="showToReplace" onclick ="renderPlayers(post)"  class="absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-[15px] w-[85px] h-28 "></button>
                     <p class="absolute bottom-2 left-1/2 -translate-x-[13px] -translate-y-[46px] text-gray-300 font-normal text-[7px]">${playerName}</p>
                     <p class="absolute bottom-2 left-1/2 -translate-x-[31px] -translate-y-[32px] text-gray-400 font-light text-[8px]">${playerPace}</p>
                     <p class="absolute bottom-2 left-1/2 -translate-x-[31px] -translate-y-[22px] text-gray-400 font-light text-[8px]">${playerShooting}</p>
@@ -611,6 +625,9 @@
         let fullName = document.getElementById("fullName").value;
         let club = document.getElementById("club").value;
         let country = document.getElementById("country").value;
+       
+
+
     
         const nameRegex = /^[a-zA-Z\s]+$/;
         const clubRegex = /^[a-zA-Z\s]+$/;
@@ -669,6 +686,8 @@
             alert("Please enter a valid Phy value (0-100).");
             return false;
         }
+
+
     
         return true;
     }
@@ -723,7 +742,7 @@
             modal.classList.add("hidden");
         });
 
-        
+
         modal.addEventListener("click", (event) => {
             if (event.target === modal) {
                 modal.classList.add("hidden");
